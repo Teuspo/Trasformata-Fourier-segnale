@@ -3,6 +3,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.fft
 
+# Script per calcolare la trasformata di Fourier di un segnale e applicare un filtro
+
 T   = 1         # Periodo
 fs  = 1000      # Frequenza di campionamento
 N   = T * fs    # Numero di punti
@@ -24,7 +26,7 @@ plt.plot(xt, yt)
 plt.subplot(3, 1, 2)
 plt.plot(np.abs(yf) / N)
 
-yf[100:] = 0
+yf[50:] = 0
 
 Yt  = scipy.fft.irfft(yf)
 plt.subplot(3, 1, 3)
